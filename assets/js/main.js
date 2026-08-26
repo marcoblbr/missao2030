@@ -164,6 +164,31 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
+// Rede de seguranca do reveal. Enquanto .reveal esta em opacidade parcial, a
+// imagem e composta sobre o azul-escuro do fundo: os pretos sobem, os brancos
+// caem, e a foto parece lavada, com um veu azulado. Se por qualquer motivo o
+// observer nao disparar (aba em segundo plano, prefers-reduced-motion, erro de
+// JS antes daqui), o elemento fica preso nesse estado. Duas garantias:
+//   1. o que ja nasce visivel na tela aparece direto, sem fade;
+//   2. passados 2,5s, qualquer .reveal restante e revelado de qualquer forma.
+// Nos dois casos a revelacao e INSTANTANEA (transition: none). So adicionar a
+// classe nao resolve: a transicao de opacidade nao avanca em aba de segundo
+// plano, entao o elemento ficaria parado na opacidade 0 mesmo ja marcado como
+// visivel. Zerar a transicao faz a opacidade saltar para 1 na hora.
+(function redeDeSegurancaReveal() {
+  const revelar = (el) => {
+    el.style.transition = "none";
+    el.classList.add("visible");
+    revealObserver.unobserve(el);
+  };
+
+  document.querySelectorAll(".reveal").forEach((el) => {
+    if (el.getBoundingClientRect().top < window.innerHeight) revelar(el);
+  });
+
+  setTimeout(() => document.querySelectorAll(".reveal:not(.visible)").forEach(revelar), 2500);
+})();
+
 // ---------- contadores animados ----------
 function animarNumero(el, alvo) {
   const dur = 1600;
