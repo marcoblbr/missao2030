@@ -1,6 +1,6 @@
-/* ===== Missão 2030 — interações da landing page ===== */
+/* ===== Missão 2030 - interações da landing page ===== */
 
-// ---------- dados dos 10 encontros ----------
+// ---------- dados das 10 temáticas (cada uma ocupa 2 encontros) ----------
 const ENCONTROS = [
   {
     n: 1, nome: "A Jornada", tema: "Projeto de vida",
@@ -48,28 +48,28 @@ const ENCONTROS = [
     n: 7, nome: "A Influência", tema: "Pertencimento e ambiente",
     pergunta: "Como grupos, cultura e ambiente me moldam?",
     peca: "Mapa de influências positivas e negativas",
-    desc: "O foco é pertencimento e ambiente. O participante reflete sobre como grupos, amizades, redes sociais, cultura e ambientes moldam escolhas. Somos a média das pessoas com quem convivemos — que tipo de pessoa eu me torno nesse grupo?",
+    desc: "O foco é pertencimento e ambiente. O participante reflete sobre como grupos, amizades, redes sociais, cultura e ambientes moldam escolhas. Somos a média das pessoas com quem convivemos: que tipo de pessoa eu me torno nesse grupo?",
     img: "assets/img/encontros/07-influencia.jpg"
   },
   {
     n: 8, nome: "A Escolha", tema: "Valores e decisão",
     pergunta: "Como tomar boas decisões quando há pressão, dúvida ou tentação?",
     peca: "Código de valores e critérios de decisão",
-    desc: "Este encontro trabalha valores, caráter e decisão responsável. O participante aprende a tomar decisões melhores quando existe pressão, dúvida, tentação, desejo de aceitação ou ambição — e começa a construir seu código pessoal de valores.",
+    desc: "Este encontro trabalha valores, caráter e decisão responsável. O participante aprende a tomar decisões melhores quando existe pressão, dúvida, tentação, desejo de aceitação ou ambição, e começa a construir seu código pessoal de valores.",
     img: "assets/img/encontros/08-escolha.jpg"
   },
   {
     n: 9, nome: "A Criação", tema: "Empreendedorismo",
     pergunta: "Como transformar ideias em projetos que geram valor?",
     peca: "Ideia de projeto, solução ou iniciativa",
-    desc: "O foco é empreendedorismo e criação de valor. O participante aprende a transformar ideias em projetos, iniciativas ou soluções. Aqui entram STEAM, pensamento crítico, criatividade aplicada, resolução de problemas, colaboração e prototipagem — a ponte para o desafio da NASA.",
+    desc: "O foco é empreendedorismo e criação de valor. O participante aprende a transformar ideias em projetos, iniciativas ou soluções. Aqui entram STEAM, pensamento crítico, criatividade aplicada, resolução de problemas, colaboração e prototipagem: a ponte para o desafio da NASA.",
     img: "assets/img/encontros/09-criacao.jpg"
   },
   {
     n: 10, nome: "O Legado", tema: "Impacto",
     pergunta: "Que contribuição quero deixar no mundo?",
     peca: "Manifesto final da jornada",
-    desc: "O fechamento conecta a jornada pessoal ao impacto no mundo: cidadania planetária, sustentabilidade, aquecimento global, limites planetários, tecnologia e futuro do trabalho. Cada participante apresenta seu Manifesto da Jornada — a síntese do seu Projeto de Vida.",
+    desc: "O fechamento conecta a jornada pessoal ao impacto no mundo: cidadania planetária, sustentabilidade, aquecimento global, limites planetários, tecnologia e futuro do trabalho. Cada participante apresenta seu Manifesto da Jornada: a síntese do seu Projeto de Vida.",
     img: "assets/img/encontros/10-legado.jpg"
   }
 ];
@@ -81,9 +81,9 @@ if (grade) {
     const col = document.createElement("div");
     col.className = "col-sm-6 col-lg-4 col-xl-3 reveal";
     col.innerHTML = `
-      <div class="card-m30 encontro-card" data-idx="${i}" role="button" aria-label="Ver detalhes do encontro ${e.n} — ${e.nome}">
+      <div class="card-m30 encontro-card" data-idx="${i}" role="button" aria-label="Ver detalhes da temática ${e.n}: ${e.nome}">
         <span class="encontro-num">${e.n}</span>
-        <div style="overflow:hidden;"><img src="${e.img}" alt="Encontro ${e.n} — ${e.nome}" class="w-100" loading="lazy"></div>
+        <div style="overflow:hidden;"><img src="${e.img}" alt="Temática ${e.n}: ${e.nome}" class="w-100" loading="lazy"></div>
         <div class="card-body">
           <div class="tema">${e.tema}</div>
           <h5 class="mb-1 mt-1">${e.nome}</h5>
@@ -103,9 +103,9 @@ const modal = modalEl ? new bootstrap.Modal(modalEl) : null;
 function abrirEncontro(i) {
   atual = (i + ENCONTROS.length) % ENCONTROS.length;
   const e = ENCONTROS[atual];
-  document.getElementById("me-titulo").textContent = `Encontro ${e.n} — ${e.nome}`;
+  document.getElementById("me-titulo").textContent = `Temática ${e.n}: ${e.nome}`;
   document.getElementById("me-img").src = e.img;
-  document.getElementById("me-img").alt = `Encontro ${e.n} — ${e.nome}`;
+  document.getElementById("me-img").alt = `Temática ${e.n}: ${e.nome}`;
   document.getElementById("me-tema").textContent = `Tema central: ${e.tema}`;
   document.getElementById("me-pergunta").textContent = `"${e.pergunta}"`;
   document.getElementById("me-desc").textContent = e.desc;
@@ -122,12 +122,12 @@ document.addEventListener("click", (ev) => {
 document.getElementById("me-prev")?.addEventListener("click", () => abrirEncontro(atual - 1));
 document.getElementById("me-next")?.addEventListener("click", () => abrirEncontro(atual + 1));
 
-// ---------- contador regressivo (aula de abertura 15/07 às 19h) ----------
+// ---------- contador regressivo (aula de abertura 26/08/2026, 19h de Brasilia) ----------
 (function countdown() {
-  const alvoBase = new Date(new Date().getFullYear(), 6, 15, 19, 0, 0); // 15 de julho, 19h
-  const alvo = alvoBase.getTime() > Date.now()
-    ? alvoBase
-    : new Date(new Date().getFullYear() + 1, 6, 15, 19, 0, 0);
+  // Data fixa com o fuso escrito na string (-03:00). Sem isso o alvo seria
+  // montado no fuso de quem acessa, e quem estivesse fora do Brasil veria
+  // uma contagem deslocada.
+  const alvo = new Date("2026-08-26T19:00:00-03:00");
 
   const el = {
     d: document.getElementById("cd-d"),
@@ -172,9 +172,13 @@ function animarNumero(el, alvo) {
     const p = Math.min(1, (t - inicio) / dur);
     const eased = 1 - Math.pow(1 - p, 3);
     const val = Math.round(alvo * eased);
-    el.textContent = val >= 10000 ? val.toLocaleString("pt-BR") : String(val);
+    // data-prefix / data-suffix deixam o "+" no HTML, junto do numero que ele qualifica
+    const pre = el.dataset.prefix || "";
+    const suf = el.dataset.suffix || "";
+    const fmt = (n) => pre + (n >= 10000 ? n.toLocaleString("pt-BR") : String(n));
+    el.textContent = fmt(val);
     if (p < 1) requestAnimationFrame(frame);
-    else el.textContent = alvo >= 10000 ? alvo.toLocaleString("pt-BR") + "+" : String(alvo);
+    else el.textContent = fmt(alvo) + suf;
   }
   requestAnimationFrame(frame);
 }
