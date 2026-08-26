@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Missão 2030 — Formando jovens protagonistas para os desafios do futuro</title>
+  <meta name="description" content="Jornada formativa em 10 encontros para jovens da comunidade NASA Space Apps: projeto de vida, virtudes, oratória e impacto. Inscrições abertas.">
+  <meta property="og:title" content="Missão 2030 — Formando jovens protagonistas">
+  <meta property="og:description" content="10 encontros ao vivo + Curso de Oratória + Marketing Pessoal + Programa de Visitas. Construa seu Projeto de Vida com a comunidade campeã mundial do NASA Space Apps.">
+  <meta property="og:image" content="https://marcoblbr.github.io/missao2030/assets/img/hero-retangular.jpg">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS custom -->
+  <link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="stars-layer"></div>
+
+<!-- ======================= NAVBAR ======================= -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-m30 fixed-top">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="#topo">MISSÃO <span>2030</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#programa">O Programa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#encontros">Os 10 Encontros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bonus">Bônus</a></li>
+        <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cronograma">Cronograma</a></li>
+        <li class="nav-item"><a class="nav-link" href="#investimento">Investimento</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://pay.hotmart.com/C105880135T?checkoutMode=10" target="_blank" rel="noopener" class="btn btn-m30 btn-sm px-3 py-2">Inscreva-se</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" id="topo">
+  <div class="container py-5 mt-5">
+    <div class="row">
+      <div class="col-lg-9">
+        <span class="section-tag"><i class="bi bi-rocket-takeoff me-2"></i>Treinamento oficial da comunidade NASA Space Apps Campinas</span>
+        <h1 class="mt-2">Missão <span class="glow">2030</span><br>Formando jovens protagonistas<br class="d-none d-md-block"> para os desafios do futuro.</h1>
+        <p class="lead mt-4">
+          Uma jornada de <strong>10 encontros ao vivo</strong> para construir um <strong>Projeto de Vida</strong> com propósito,
+          resiliência e impacto — junto da comunidade que já formou <strong>3 times campeões mundiais</strong> do desafio da NASA.
+        </p>
+
+        <div class="hero-badges d-flex flex-wrap gap-2 mt-4">
+          <span class="badge"><i class="bi bi-puzzle me-2"></i>10 encontros + 2 cursos extras</span>
+          <span class="badge"><i class="bi bi-camera-video me-2"></i>Ao vivo + gravações por 1 ano</span>
+          <span class="badge"><i class="bi bi-award me-2"></i>Certificado de 40 horas</span>
+          <span class="badge"><i class="bi bi-people me-2"></i>Crianças, adolescentes e adultos</span>
+        </div>
+
+        <div class="d-flex flex-wrap align-items-center gap-3 mt-5">
+          <a href="https://pay.hotmart.com/C105880135T?checkoutMode=10" target="_blank" rel="noopener" class="btn btn-m30 btn-lg">
+            <i class="bi bi-rocket-takeoff me-2"></i>Quero embarcar na missão
+          </a>
+          <a href="#programa" class="btn btn-outline-m30 btn-lg">Conhecer o programa</a>
+        </div>
+
+        <div class="mt-5">
+          <p class="mb-2 text-muted-m30 small text-uppercase" style="letter-spacing:.18em;">
+            <i class="bi bi-broadcast me-1 text-gold"></i> Aula de abertura: 15/07, quarta-feira, às 19h
+          </p>
+          <div class="countdown-box" id="countdown">
+            <div class="unit"><div class="num" id="cd-d">--</div><div class="lbl">dias</div></div>
+            <div class="unit"><div class="num" id="cd-h">--</div><div class="lbl">horas</div></div>
+            <div class="unit"><div class="num" id="cd-m">--</div><div class="lbl">min</div></div>
+            <div class="unit"><div class="num" id="cd-s">--</div><div class="lbl">seg</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= FAIXA DE NÚMEROS ======================= -->
+<section class="stats-band py-4">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3 reveal">
+        <div class="stat-num" data-count="110000">0</div>
+        <div class="stat-lbl">participantes do NASA Space Apps no mundo</div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="stat-num" data-count="3">0</div>
+        <div class="stat-lbl">times campeões mundiais formados aqui</div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="stat-num" data-count="10">0</div>
+        <div class="stat-lbl">encontros ao vivo (20 aulas) em 7 meses</div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="stat-num" data-count="40">0</div>
+        <div class="stat-lbl">horas de certificado (com distinção &gt; 90%)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CREDIBILIDADE ======================= -->
+<section class="section" id="historia">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal">
+        <span class="section-tag">De onde vem essa missão</span>
+        <h2>Nascemos da comunidade que <span class="text-cyan">venceu o mundo</span> 3 vezes</h2>
+        <p class="text-muted-m30 mt-3">
+          O Missão 2030 é um dos treinamentos que preparamos para a comunidade do
+          <strong class="text-white">NASA International Space Apps Challenge</strong>, o maior hackathon do planeta.
+          Só 10 times no mundo são premiados por ano — e os nossos times
+          <strong class="text-white">Donzelas da Missão Espacial</strong>, <strong class="text-white">Greetings from Earth</strong> e
+          <strong class="text-white">Connected Earth Museum</strong> subiram ao pódio mundial em 2023 e 2024,
+          com celebração no quartel-general da NASA em Washington D.C.
+        </p>
+        <p class="text-muted-m30">
+          Nossa missão é <strong class="text-gold">impactar 1 bilhão de pessoas até 2035</strong>, formando cidadãos globais
+          que usam tecnologia para resolver os maiores desafios do planeta Terra e do espaço.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge rounded-pill" style="background:rgba(76,201,240,.12); border:1px solid rgba(76,201,240,.4); color:#9bd8ff;">Inspirar</span>
+          <span class="badge rounded-pill" style="background:rgba(76,201,240,.12); border:1px solid rgba(76,201,240,.4); color:#9bd8ff;">Capacitar</span>
+          <span class="badge rounded-pill" style="background:rgba(76,201,240,.12); border:1px solid rgba(76,201,240,.4); color:#9bd8ff;">Conectar</span>
+          <span class="badge rounded-pill" style="background:rgba(76,201,240,.12); border:1px solid rgba(76,201,240,.4); color:#9bd8ff;">Implementar</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-12 reveal">
+            <div class="card-m30"><img src="assets/img/fotos/premiacao-nasa.jpg" alt="Premiação mundial do NASA Space Apps Challenge com a bandeira do Brasil" class="w-100"></div>
+          </div>
+          <div class="col-6 reveal">
+            <div class="card-m30"><img src="assets/img/fotos/comunidade-2.jpg" alt="Comunidade NASA Space Apps Campinas reunida" class="w-100"></div>
+          </div>
+          <div class="col-6 reveal">
+            <div class="card-m30"><img src="assets/img/fotos/certificados.jpg" alt="Jovens recebendo certificados no palco" class="w-100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= O PROGRAMA ======================= -->
+<section class="section bg-deep" id="programa">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">O que é o Missão 2030</span>
+      <h2>Um quebra-cabeça que monta o seu <span class="text-gold">Projeto de Vida</span></h2>
+      <p class="section-sub">
+        A cada encontro, o aluno conecta uma peça do quebra-cabeça e constrói o
+        <strong class="text-white">Caderno do seu Projeto de Vida</strong> — um documento pessoal com sua história,
+        seus valores, seus talentos, seus medos e a contribuição que quer deixar no mundo.
+      </p>
+    </div>
+
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7 reveal">
+        <div class="card-m30 p-2">
+          <img src="assets/img/fotos/quebra-cabeca.jpg" alt="As 10 peças do quebra-cabeça do Missão 2030" class="w-100 rounded-3">
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="d-flex gap-3 mb-4 reveal">
+          <div class="bonus-icon flex-shrink-0"><i class="bi bi-compass"></i></div>
+          <div>
+            <h5 class="mb-1">Projeto de Vida</h5>
+            <p class="text-muted-m30 mb-0">Quem sou? Para onde vou? Que contribuição quero deixar? Cada encontro responde uma pergunta-guia da sua jornada.</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-4 reveal">
+          <div class="bonus-icon flex-shrink-0"><i class="bi bi-heart-pulse"></i></div>
+          <div>
+            <h5 class="mb-1">Virtudes + Novas Habilidades</h5>
+            <p class="text-muted-m30 mb-0">Coragem, resiliência, pensamento crítico, tomada de decisão, empreendedorismo e cultura STEAM — alinhado a referências como CASEL, OECD e UNESCO.</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-4 reveal">
+          <div class="bonus-icon flex-shrink-0"><i class="bi bi-mic"></i></div>
+          <div>
+            <h5 class="mb-1">Comunicação e Oratória</h5>
+            <p class="text-muted-m30 mb-0">Você apresenta nos encontros ao vivo e ainda leva um Curso de Oratória completo de bônus, junto com os Embaixadores.</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3 reveal">
+          <div class="bonus-icon flex-shrink-0"><i class="bi bi-film"></i></div>
+          <div>
+            <h5 class="mb-1">Clube do filme e do livro</h5>
+            <p class="text-muted-m30 mb-0">Metodologias ativas com estudos de caso de filmes e livros, adaptados por faixa etária — de Moana e Rei Leão a O Marciano e biografias de cientistas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= OS 10 ENCONTROS ======================= -->
+<section class="section" id="encontros">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">A jornada completa</span>
+      <h2>Os <span class="text-cyan">10 encontros</span>, peça por peça</h2>
+      <p class="section-sub">Clique em cada peça para ver o tema, a pergunta-guia e o que ela constrói no seu Projeto de Vida.</p>
+    </div>
+
+    <div class="row g-4" id="grade-encontros">
+      <!-- cards inseridos via JS a partir de ENCONTROS -->
+    </div>
+  </div>
+</section>
+
+<!-- Modal do encontro -->
+<div class="modal fade modal-m30" id="modalEncontro" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="me-titulo">Encontro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <img id="me-img" src="" alt="" class="w-100 rounded-3 mb-3">
+        <p class="mb-2"><span class="tema text-cyan text-uppercase" style="letter-spacing:.14em; font-size:.78rem;" id="me-tema"></span></p>
+        <p class="fs-5 fw-semibold mb-2" id="me-pergunta"></p>
+        <p class="text-muted-m30" id="me-desc"></p>
+        <span class="peca-badge"><i class="bi bi-puzzle me-2"></i><span id="me-peca"></span></span>
+      </div>
+      <div class="modal-footer border-0 justify-content-between">
+        <button class="btn btn-outline-m30 btn-sm" id="me-prev"><i class="bi bi-chevron-left me-1"></i>Anterior</button>
+        <button class="btn btn-outline-m30 btn-sm" id="me-next">Próximo<i class="bi bi-chevron-right ms-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= COMO FUNCIONA ======================= -->
+<section class="section bg-deep" id="metodologia">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Metodologias ativas</span>
+      <h2>Como funciona <span class="text-gold">cada encontro</span></h2>
+      <p class="section-sub">Aqui não tem professor falando sozinho: o aluno é o centro. Um ciclo quinzenal, leve e mão na massa.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-6 col-lg-4 reveal">
+        <div class="step-card">
+          <span class="step-n">1</span>
+          <i class="bi bi-play-btn"></i>
+          <h6 class="mt-3 mb-1">Aula teórica gravada</h6>
+          <p class="text-muted-m30 small mb-0">Você recebe o conteúdo do tema + a atividade do encontro, para assistir no seu ritmo.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-4 reveal">
+        <div class="step-card">
+          <span class="step-n">2</span>
+          <i class="bi bi-people"></i>
+          <h6 class="mt-3 mb-1">Formação de grupo</h6>
+          <p class="text-muted-m30 small mb-0">Grupos se organizam e escolhem o desafio: filme ou livro do encontro.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-4 reveal">
+        <div class="step-card">
+          <span class="step-n">3</span>
+          <i class="bi bi-film"></i>
+          <h6 class="mt-3 mb-1">Assistir / Ler</h6>
+          <p class="text-muted-m30 small mb-0">Estudo de caso com filmes e livros adaptados por idade — do Rei Leão a O Marciano.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-4 reveal">
+        <div class="step-card">
+          <span class="step-n">4</span>
+          <i class="bi bi-chat-dots"></i>
+          <h6 class="mt-3 mb-1">Discussão</h6>
+          <p class="text-muted-m30 small mb-0">O grupo discute e prepara sua apresentação, conectando a história ao tema.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-4 reveal">
+        <div class="step-card">
+          <span class="step-n">5</span>
+          <i class="bi bi-easel"></i>
+          <h6 class="mt-3 mb-1">Apresentação ao vivo</h6>
+          <p class="text-muted-m30 small mb-0">No encontro ao vivo (quartas, 19h), os grupos apresentam e debatem juntos.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-4 reveal">
+        <div class="step-card">
+          <span class="step-n">6</span>
+          <i class="bi bi-journal-bookmark"></i>
+          <h6 class="mt-3 mb-1">Caderno do Projeto de Vida</h6>
+          <p class="text-muted-m30 small mb-0">Os aprendizados viram páginas do seu caderno — a peça do quebra-cabeça se encaixa.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- vídeos de trechos reais -->
+    <div class="row g-4 mt-4 justify-content-center">
+      <div class="col-12 text-center reveal">
+        <h4 class="mb-1">Veja um <span class="text-cyan">trecho real</span> de encontro</h4>
+        <p class="text-muted-m30">Alunos apresentando o estudo de caso do filme Homem-Aranha no encontro sobre a Jornada do Herói.</p>
+      </div>
+      <div class="col-md-6 col-lg-5 reveal">
+        <div class="video-frame">
+          <video controls preload="none" poster="assets/video/trecho-julia-poster.jpg">
+            <source src="assets/video/trecho-julia.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption text-center mt-2"><i class="bi bi-camera-video me-1"></i>Júlia apresenta "A Cena do Trem" — o herói também é humano</p>
+      </div>
+      <div class="col-md-6 col-lg-5 reveal">
+        <div class="video-frame">
+          <video controls preload="none" poster="assets/video/trecho-dante-poster.jpg">
+            <source src="assets/video/trecho-dante.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption text-center mt-2"><i class="bi bi-camera-video me-1"></i>Dante analisa a escolha de Peter Parker — escolhas que mudam o rumo da vida</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BÔNUS ======================= -->
+<section class="section" id="bonus">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Muito além dos 10 encontros</span>
+      <h2>O que está <span class="text-gold">incluso</span> na sua inscrição</h2>
+      <p class="section-sub">Imediatamente após a inscrição, você já recebe acesso a tudo isso:</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card-m30 position-relative">
+          <span class="bonus-tag">BÔNUS</span>
+          <img src="assets/img/bonus/sirius.jpg" alt="Sirius — acelerador de partículas" class="w-100">
+          <div class="card-body p-4">
+            <h5>Programa de Visitas</h5>
+            <p class="text-muted-m30 mb-0">Visita ao <strong class="text-white">Sirius</strong> (o maior acelerador de partículas da América Latina), ao <strong class="text-white">Museu de Astronomia — MAAS</strong> e sessão de cinema com a turma.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card-m30 position-relative">
+          <span class="bonus-tag">BÔNUS</span>
+          <div class="card-body p-4">
+            <div class="bonus-icon mb-3"><i class="bi bi-mic"></i></div>
+            <h5>Curso de Oratória</h5>
+            <p class="text-muted-m30 mb-2">7 aulas com certificado, junto com os Embaixadores. Comunicação, escuta e presença de palco para apresentar ideias com propósito.</p>
+            <span class="badge rounded-pill text-bg-warning">+ certificado</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card-m30 position-relative">
+          <span class="bonus-tag">BÔNUS</span>
+          <div class="card-body p-4">
+            <div class="bonus-icon mb-3"><i class="bi bi-person-badge"></i></div>
+            <h5>Curso de Marketing Pessoal</h5>
+            <p class="text-muted-m30 mb-2">2 aulas com certificado para aprender a comunicar seu talento e construir sua imagem com autenticidade.</p>
+            <span class="badge rounded-pill text-bg-warning">+ certificado</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card-m30 position-relative">
+          <span class="bonus-tag">BÔNUS</span>
+          <img src="assets/img/bonus/xadrez.jpg" alt="Medalha do campeonato de xadrez Space Chess" class="w-100">
+          <div class="card-body p-4">
+            <h5>Campeonato de Xadrez</h5>
+            <p class="text-muted-m30 mb-0">Inscrição no <strong class="text-white">Space Chess</strong>, com troféu e medalhas — estratégia e diversão com a comunidade.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card-m30 position-relative">
+          <span class="bonus-tag">BÔNUS</span>
+          <img src="assets/img/bonus/galaxy-points.jpg" alt="Galaxy Points" class="w-100">
+          <div class="card-body p-4">
+            <h5>Galaxy Points</h5>
+            <p class="text-muted-m30 mb-0">Cada presença vale pontos que você troca por brindes: jaquetas e camisetas da NASA, jogos de tabuleiro e até um <strong class="text-white">telescópio de R$ 2.000</strong> como prêmio máximo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card-m30 position-relative">
+          <div class="card-body p-4">
+            <div class="bonus-icon mb-3"><i class="bi bi-journal-richtext"></i></div>
+            <h5>Caderno digital + Certificado 40h</h5>
+            <p class="text-muted-m30 mb-2">O Caderno do Projeto de Vida construído encontro a encontro, gravações das aulas da Unicamp e certificado de conclusão de 40 horas (com distinção acima de 90%).</p>
+            <span class="badge rounded-pill text-bg-info">incluso</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-m30 mt-4 p-4 reveal">
+      <div class="row align-items-center g-3">
+        <div class="col-auto"><div class="bonus-icon"><i class="bi bi-stars"></i></div></div>
+        <div class="col">
+          <strong class="text-gold">Porta de entrada para o Programa de Embaixadores:</strong>
+          <span class="text-muted-m30">4 alunos do Missão 2030 serão selecionados diretamente para a etapa de entrevistas do Programa de Embaixadores em 2027.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DEPOIMENTOS ======================= -->
+<section class="section bg-deep" id="depoimentos">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Quem vive a jornada</span>
+      <h2>O que as famílias e os alunos <span class="text-cyan">estão dizendo</span></h2>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-6 reveal">
+        <div class="video-frame h-100 d-flex flex-column justify-content-center">
+          <video controls preload="none" poster="assets/video/depoimento-mae-poster.jpg">
+            <source src="assets/video/depoimento-mae.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-caption text-center mt-2"><i class="bi bi-chat-heart me-1"></i>Elidiane, mãe do Nicolas — depoimento enviado à organização</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <div class="col-12 reveal">
+            <div class="quote-card">
+              <i class="bi bi-quote"></i>
+              <p>"A atividade, para nós, tem uma função até terapêutica e de bem-estar. Crianças como a Maria Fernanda não têm muito espaço na escola para se expressarem e demonstrarem seu conhecimento — então é uma oportunidade maravilhosa dela ser ouvida e validada. Muito obrigada!"</p>
+              <div class="who">Genimar dos Santos</div>
+              <div class="role">mãe de aluna</div>
+            </div>
+          </div>
+          <div class="col-12 reveal">
+            <div class="quote-card">
+              <i class="bi bi-quote"></i>
+              <p>"A reunião deu um gás para a Brisa: ela viu as outras meninas correndo atrás e disse 'eu também posso'. A olimpíada da qual ela ia desistir, ela foi lá, estudou e fez. Estou profundamente grata."</p>
+              <div class="who">Arlenne Lima</div>
+              <div class="role">mãe da Brisa, participante da Argentina</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 reveal">
+        <div class="quote-card">
+          <i class="bi bi-quote"></i>
+          <p>"A Jornada do Herói foi um divisor de águas na vida do Davi. É uma jornada transformadora: o valor é simbólico e o ganho é totalmente gigante."</p>
+          <div class="who">Miriam Lima de Oliveira</div>
+          <div class="role">mãe e co-organizadora do programa</div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="quote-card">
+          <i class="bi bi-quote"></i>
+          <p>"Ter coragem não é ir sem medo — é ir com medo e mesmo assim fazer. Estar com as pessoas certas influencia: aqui eu encontrei crianças que têm o mesmo propósito que eu."</p>
+          <div class="who">Isabella</div>
+          <div class="role">embaixadora, interior da Bahia</div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="quote-card">
+          <i class="bi bi-quote"></i>
+          <p>"É muito divertido, uma experiência incrível — conheço pessoas que gostam das mesmas coisas que eu. Na primeira tentativa fui semifinalista; na segunda, aprovada. Nunca desista: o próximo passo pode ser a vitória."</p>
+          <div class="who">Clara</div>
+          <div class="role">embaixadora, 10 anos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PARA QUEM É ======================= -->
+<section class="section" id="paraquem">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Escolha consciente</span>
+      <h2>Para quem é (e para quem <span class="text-gold">não</span> é)</h2>
+      <p class="section-sub">Nem todo programa é para todo mundo — e isso também faz parte de uma escolha consciente.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6 reveal">
+        <div class="fit-card fit-yes">
+          <h4 class="mb-4"><i class="bi bi-check-circle-fill me-2" style="color:#2fe6a7;"></i>O Missão 2030 é para quem…</h4>
+          <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-check-lg me-2"></i>Quer fazer parte de uma <strong>comunidade de altíssimo nível</strong> e conhecer novas pessoas;</li>
+            <li><i class="bi bi-check-lg me-2"></i>Quer construir um <strong>Projeto de Vida com propósito</strong>;</li>
+            <li><i class="bi bi-check-lg me-2"></i>Deseja desenvolver mais <strong>coragem, resiliência e protagonismo</strong>;</li>
+            <li><i class="bi bi-check-lg me-2"></i>Busca um <strong>enriquecimento curricular diferenciado</strong> (intercâmbios, olimpíadas, universidades de ponta);</li>
+            <li><i class="bi bi-check-lg me-2"></i>Gosta de <strong>ciência, tecnologia, espaço, sustentabilidade e inovação</strong>;</li>
+            <li><i class="bi bi-check-lg me-2"></i>Sente que tem potencial, mas <strong>precisa de direção</strong>;</li>
+            <li><i class="bi bi-check-lg me-2"></i>Quer transformar talentos em <strong>projetos e impacto no mundo</strong>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <div class="fit-card fit-no">
+          <h4 class="mb-4"><i class="bi bi-x-circle-fill me-2" style="color:#ff6b6b;"></i>E não é para quem…</h4>
+          <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-x-lg me-2"></i>Quer fazer <strong>mais do que o próprio filho</strong> — a vontade precisa ser do participante;</li>
+            <li><i class="bi bi-x-lg me-2"></i>Quer <strong>apenas assistir aulas</strong> sem participar — aqui é mão na massa;</li>
+            <li><i class="bi bi-x-lg me-2"></i>Está em <strong>dedicação integral a outro objetivo urgente</strong> (ex.: vestibular do ITA em dezembro);</li>
+            <li><i class="bi bi-x-lg me-2"></i>Já tem um projeto de vida <strong>100% definido</strong> e não precisa refletir mais sobre isso;</li>
+            <li><i class="bi bi-x-lg me-2"></i>Acha que o programa é <strong>uma terapia</strong> — não substitui acompanhamento profissional;</li>
+            <li><i class="bi bi-x-lg me-2"></i>Sente que o investimento <strong>ficaria pesado neste momento</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-m30 mt-4 p-4 text-center reveal">
+      <p class="mb-0 text-muted-m30">
+        <i class="bi bi-shield-heart me-2 text-cyan"></i>
+        <strong class="text-white">Tolerância zero ao bullying.</strong> Respeito, empatia e segurança para todos. Aqui, ninguém fica sozinho.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CRONOGRAMA ======================= -->
+<section class="section bg-deep" id="cronograma">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Agenda da missão</span>
+      <h2>Cronograma de <span class="text-cyan">lançamento</span></h2>
+      <p class="section-sub">O embarque já começou com o Curso de Oratória — e a decolagem oficial do Missão 2030 é dia 15/07.</p>
+    </div>
+
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 reveal">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">30/05 — Sábado, 14h30</div>
+            <div>Oratória — Aula 1 <span class="desc">(presencial na Unicamp + gravação)</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">03/06 · 17/06 · 01/07 — Quartas</div>
+            <div>Oratória — Aulas 2, 4 e 6 <span class="desc">(online gravadas)</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">10/06 · 24/06 · 08/07 — Quartas, 19h</div>
+            <div>Oratória — Aulas 3, 5 e 7 <span class="desc">(online ao vivo)</span></div>
+          </div>
+          <div class="timeline-item gold">
+            <div class="date">15/07 — Quarta-feira, 19h</div>
+            <div><strong class="text-gold">AULA DE ABERTURA DO MISSÃO 2030</strong> <span class="desc">— começa a jornada dos 10 encontros</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">Jul → Fev — Quartas, 19h</div>
+            <div>10 encontros quinzenais ao vivo <span class="desc">— teoria gravada + 2 semanas para a atividade em grupo + encontro ao vivo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <div class="card-m30 p-2">
+          <img src="assets/img/fotos/mapa-jornada.jpg" alt="Mapa da jornada de protagonismo com os 10 encontros" class="w-100 rounded-3">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MENTORIA ======================= -->
+<section class="section" id="mentoria">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal">
+        <div class="card-m30 p-2 position-relative">
+          <span class="bonus-tag">SOMENTE 10 VAGAS</span>
+          <img src="assets/img/bonus/mentoria.jpg" alt="Mentoria individual do Missão 2030" class="w-100 rounded-3">
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <span class="section-tag">Opcional no checkout</span>
+        <h2>Mentoria <span class="text-gold">individual</span></h2>
+        <p class="text-muted-m30 mt-3">
+          Para quem quer um acompanhamento mais próximo: <strong class="text-white">2 sessões individuais de 50min com o Marco</strong>
+          (início e fim do programa) e <strong class="text-white">1 sessão de 50min com a Miriam</strong> (meio do programa)
+          para traçar o plano personalizado do seu Projeto de Vida.
+        </p>
+        <ul class="list-unstyled text-muted-m30">
+          <li class="mb-2"><i class="bi bi-graph-up-arrow me-2 text-cyan"></i>Relatório individual com gráficos e próximos passos, gerado com apoio de IA;</li>
+          <li class="mb-2"><i class="bi bi-sliders me-2 text-cyan"></i>Pode escolher 1 sessão ou o pacote com 3;</li>
+          <li><i class="bi bi-cart-plus me-2 text-cyan"></i>Basta adicionar a opção no checkout da inscrição.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INVESTIMENTO ======================= -->
+<section class="section bg-deep" id="investimento">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Investimento</span>
+      <h2>Menos que uma <span class="text-gold">pizza por mês</span></h2>
+      <p class="section-sub">O programa é em parte subsidiado pela própria comunidade, para ficar acessível ao máximo de famílias.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-7 reveal">
+        <div class="price-card p-4 p-md-5 text-center">
+          <p class="text-muted-m30 text-uppercase mb-1" style="letter-spacing:.2em;">Valor da inscrição</p>
+          <div class="price-value">R$ 95<span style="font-size:1.6rem;">/mês</span></div>
+          <p class="text-muted-m30 mt-2 mb-1">7 meses de programa · total de R$ 665</p>
+          <p class="text-muted-m30 mb-4">Pode ser parcelado em até 12x · acesso ao conteúdo gravado por 1 ano</p>
+
+          <ul class="list-unstyled price-list text-start mx-auto mb-4" style="max-width:460px;">
+            <li><i class="bi bi-check-circle-fill me-2"></i>Missão 2030 — 10 encontros ao vivo (20 aulas)</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Curso de Oratória (7 aulas + certificado)</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Curso de Marketing Pessoal (2 aulas + certificado)</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Convite para o Programa de Visitas (Sirius + MAAS + cinema)</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Inscrição no campeonato de Xadrez</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Galaxy Points para trocar por brindes (cashback de ~30%)</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Caderno digital do Projeto de Vida</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Certificado de conclusão de 40 horas</li>
+          </ul>
+
+          <a href="https://pay.hotmart.com/C105880135T?checkoutMode=10" target="_blank" rel="noopener" class="btn btn-m30 btn-lg w-100 mb-3">
+            <i class="bi bi-rocket-takeoff me-2"></i>Garantir minha vaga agora
+          </a>
+          <p class="small text-muted-m30 mb-3"><i class="bi bi-lock me-1"></i>Pagamento 100% seguro pela Hotmart</p>
+
+          <div class="pizza-note p-3">
+            <i class="bi bi-lightbulb me-2"></i>Uma pizza custa mais de R$ 100. Por menos que isso por mês,
+            você investe em propósito, coragem e futuro — com cashback em brindes pelos Galaxy Points.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- garantia -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-9 reveal">
+        <div class="guarantee-box p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-md-auto text-center"><i class="bi bi-shield-check"></i></div>
+            <div class="col">
+              <h4 class="mb-2">Garantia incondicional de 30 dias</h4>
+              <p class="text-muted-m30 mb-0">
+                Se por qualquer motivo você não gostar do que o programa tem a oferecer, é só pedir o investimento de volta —
+                <strong class="text-white">sem burocracia nenhuma, de maneira automática pela Hotmart</strong>.
+                Ou seja: você pode participar da visita ao Sirius e ao Museu de Astronomia, do campeonato de xadrez,
+                da aula de Marketing Pessoal e de boa parte do Curso de Oratória… e ainda receber 100% do valor de volta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= QUEM CONDUZ ======================= -->
+<section class="section" id="mentor">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 reveal">
+        <img src="assets/img/fotos/marco.jpg" alt="Marco Linhares no NASA Ames Research Center" class="w-100 mentor-photo">
+        <div class="row g-3 mt-1">
+          <div class="col-6"><img src="assets/img/fotos/hangar-2024.jpg" alt="Turma no Hangar One, base da NASA" class="w-100 mentor-photo"></div>
+          <div class="col-6"><img src="assets/img/fotos/comunidade-1.jpg" alt="Comunidade reunida em evento" class="w-100 mentor-photo"></div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <span class="section-tag">Quem conduz a missão</span>
+        <h2>Marco <span class="text-cyan">Linhares</span></h2>
+        <p class="text-muted-m30 mt-3">
+          Líder do <strong class="text-white">NASA Space Apps Campinas</strong> desde 2020 — a comunidade que formou
+          <strong class="text-white">3 times campeões mundiais</strong> do maior hackathon do planeta.
+        </p>
+        <ul class="list-unstyled text-muted-m30">
+          <li class="mb-3"><i class="bi bi-mortarboard me-2 text-gold"></i>Estudou na <strong class="text-white">Singularity University</strong>, no programa do Google e da NASA no Vale do Silício — uma vaga de US$ 30.000 conquistada vendendo o próprio carro e batendo de porta em porta;</li>
+          <li class="mb-3"><i class="bi bi-buildings me-2 text-gold"></i>Cocriador da pós-graduação <strong class="text-white">Master Business Exponential na Unicamp</strong> e da disciplina de Felicidade;</li>
+          <li class="mb-3"><i class="bi bi-cpu me-2 text-gold"></i>Fundador da comunidade de Inteligência Artificial <strong class="text-white">VOIX Academy</strong>;</li>
+          <li class="mb-3"><i class="bi bi-trophy me-2 text-gold"></i>Homenageado como educador no Dia Mundial da Educação;</li>
+          <li><i class="bi bi-people me-2 text-gold"></i>Ao lado dele, <strong class="text-white">Miriam Lima de Oliveira</strong> co-organiza o programa e conduz parte das mentorias individuais.</li>
+        </ul>
+        <blockquote class="quote-card mt-4">
+          <p class="mb-1">"Fazer parte de uma comunidade de pessoas que têm sonhos quase impossíveis torna esses sonhos realidade. Por mais difícil que as coisas estejam hoje: não desista."</p>
+          <div class="who">Marco Linhares</div>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="section bg-deep" id="faq">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Dúvidas frequentes</span>
+      <h2>Perguntas <span class="text-cyan">frequentes</span></h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="accordion accordion-m30" id="faqAcc">
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Para quais idades é o programa?</button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                O programa acolhe crianças, adolescentes e também adultos interessados em desenvolvimento pessoal, ciência e tecnologia.
+                As referências de cada encontro são adaptadas por faixa etária: os mais novos podem estudar Moana ou Rei Leão,
+                enquanto os maiores recebem filmes como O Marciano e Em Busca da Felicidade, biografias e capítulos de livros.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">E se eu perder um encontro ao vivo?</button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Todos os encontros ficam gravados e você tem acesso ao conteúdo por 1 ano. Mas o coração do programa é a participação ao vivo —
+                as discussões em grupo e as apresentações são onde a mágica acontece.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Quanto tempo preciso dedicar?</button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                O ritmo é leve, pensado para não competir com a escola: uma aula teórica gravada, duas semanas para fazer a atividade em grupo
+                (assistir ao filme ou ler os capítulos e discutir) e o encontro ao vivo quinzenal, sempre às quartas-feiras, 19h.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">É um curso gravado?</button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Não. O Missão 2030 usa metodologias ativas: o aluno é o centro, apresenta, discute e constrói o próprio Caderno do Projeto de Vida.
+                O caderno nem existe antes das aulas — ele é gerado a partir das discussões de cada encontro.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Como funciona a garantia?</button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Garantia incondicional de 30 dias, automática pela Hotmart: você pede o reembolso pela plataforma e recebe 100% do valor,
+                sem precisar justificar nada e sem falar com ninguém.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Como funciona a mentoria individual?</button>
+            </h3>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                É opcional e tem somente 10 vagas: 2 sessões de 50min com o Marco (início e fim do programa) e 1 com a Miriam (meio do programa),
+                com relatório individual de habilidades. Você pode escolher 1 sessão ou o pacote de 3 — basta adicionar no checkout.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">Sou de outra cidade ou estado. Posso participar?</button>
+            </h3>
+            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                Sim! Os encontros são online e temos alunos das cinco regiões do Brasil — e até fora do país.
+                As atividades presenciais (visitas, xadrez, aulas na Unicamp) são um bônus para quem puder ir a Campinas, com tudo gravado para os demais.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">Represento uma escola ou grupo. Tem condição especial?</button>
+            </h3>
+            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                A inscrição é individual, mas para escolas e grupos é possível conversar sobre condições especiais.
+                Fale com a organização pelo Instagram <a href="https://instagram.com/spaceappscampinas" target="_blank" rel="noopener">@spaceappscampinas</a>.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL ======================= -->
+<section class="section text-center" id="cta-final" style="background: linear-gradient(180deg, var(--m30-bg) 0%, rgba(8,18,38,1) 100%);">
+  <div class="container reveal">
+    <h2 class="mb-3">Vamos <span class="glow text-cyan">juntos</span>?</h2>
+    <p class="section-sub mb-4">
+      Eu entendo minha jornada, descubro quem sou, enfrento meus medos, defino que vida vale a pena,
+      aprendo a cair, reconheço minha sombra, escolho minhas influências, tomo decisões com valores,
+      crio algo no mundo — e deixo uma contribuição.
+    </p>
+    <a href="https://pay.hotmart.com/C105880135T?checkoutMode=10" target="_blank" rel="noopener" class="btn btn-m30 btn-lg px-5">
+      <i class="bi bi-rocket-takeoff me-2"></i>INSCRIÇÕES ABERTAS — Quero participar
+    </a>
+    <p class="small text-muted-m30 mt-3"><i class="bi bi-shield-check me-1"></i>Garantia incondicional de 30 dias · Pagamento seguro via Hotmart</p>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row align-items-center g-3">
+      <div class="col-md">
+        <span class="brand-logo">MISSÃO <span>2030</span></span>
+        <p class="small mb-0 mt-1">Formando jovens protagonistas para os desafios do futuro.<br>Uma iniciativa da comunidade NASA Space Apps Campinas.</p>
+      </div>
+      <div class="col-md-auto text-md-end">
+        <a href="https://instagram.com/spaceappscampinas" target="_blank" rel="noopener" class="me-3"><i class="bi bi-instagram me-1"></i>@spaceappscampinas</a>
+        <a href="https://pay.hotmart.com/C105880135T?checkoutMode=10" target="_blank" rel="noopener"><i class="bi bi-rocket-takeoff me-1"></i>Inscrever-se</a>
+        <p class="small mb-0 mt-2"><i class="bi bi-shield-heart me-1"></i>Tolerância zero ao bullying — aqui, ninguém fica sozinho.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CTA fixo no mobile -->
+<div class="cta-sticky">
+  <div class="flex-grow-1">
+    <div class="small text-muted-m30">7 meses · 10 encontros + bônus</div>
+    <strong class="text-gold">R$ 95/mês</strong>
+  </div>
+  <a href="https://pay.hotmart.com/C105880135T?checkoutMode=10" target="_blank" rel="noopener" class="btn btn-m30">Inscreva-se</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
