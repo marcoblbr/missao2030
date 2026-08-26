@@ -186,6 +186,19 @@ h1, h2, h3, h4, h5, .font-display {
   padding: .35rem 1rem;
   margin-bottom: 1rem;
 }
+/* Variante de linha unica, para a tag longa do hero (86 caracteres). O corpo
+   acompanha a largura da tela para o texto nunca estourar a pilula, e o
+   espacamento entre letras cede um pouco. Abaixo de 768px nao ha tamanho
+   legivel que caiba: ali a quebra volta de proposito. */
+.section-tag.tag-linha-unica {
+  white-space: nowrap;
+  letter-spacing: .12em;
+  font-size: clamp(.52rem, 1.02vw, .8rem);
+  max-width: 100%;
+}
+@media (max-width: 767.98px) {
+  .section-tag.tag-linha-unica { white-space: normal; letter-spacing: .16em; font-size: .68rem; }
+}
 .section h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
 .section .section-sub { color: var(--m30-muted); max-width: 720px; margin: .75rem auto 0; }
 
@@ -209,7 +222,17 @@ h1, h2, h3, h4, h5, .font-display {
 
 /* ---------- encontros ---------- */
 .encontro-card { cursor: pointer; position: relative; }
-.encontro-card img { transition: transform .4s ease; }
+/* A moldura da imagem reserva a propria altura (as fotos sao todas 4:3). Sem
+   isso, enquanto o lazy-load nao traz a imagem a div tem altura zero, o card
+   encolhe e o numero -- que e absoluto no topo do card -- cai em cima do texto. */
+.encontro-card .enc-img { aspect-ratio: 4 / 3; overflow: hidden; }
+.encontro-card .enc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
 .encontro-card:hover img { transform: scale(1.04); }
 .encontro-num {
   position: absolute;

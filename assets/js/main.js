@@ -83,7 +83,7 @@ if (grade) {
     col.innerHTML = `
       <div class="card-m30 encontro-card" data-idx="${i}" role="button" aria-label="Ver detalhes da temática ${e.n}: ${e.nome}">
         <span class="encontro-num">${e.n}</span>
-        <div style="overflow:hidden;"><img src="${e.img}" alt="Temática ${e.n}: ${e.nome}" class="w-100" loading="lazy"></div>
+        <div class="enc-img"><img src="${e.img}" alt="Temática ${e.n}: ${e.nome}" class="w-100" loading="lazy"></div>
         <div class="card-body">
           <div class="tema">${e.tema}</div>
           <h5 class="mb-1 mt-1">${e.nome}</h5>
