@@ -157,8 +157,11 @@
       </p>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
+    <!-- Player na largura cheia do container: o YouTube escolhe a resolucao
+         tambem pelo tamanho renderizado do player, entao area maior aumenta a
+         chance de ele servir 720p em vez de 360p. -->
+    <div class="row">
+      <div class="col-12">
         <div class="video-frame reveal">
           <!-- Capa local + iframe sob demanda: sem isso o YouTube carrega ~1 MB de script
                em todo mundo que abre a página, mesmo em quem nunca dá play. -->
