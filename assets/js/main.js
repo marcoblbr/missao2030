@@ -225,3 +225,17 @@ document.querySelectorAll("video").forEach((v) => {
     document.querySelectorAll("video").forEach((o) => { if (o !== v) o.pause(); });
   });
 });
+
+// ---------- capa do YouTube: so carrega o player depois do clique ----------
+document.querySelectorAll(".yt-facade").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const id = btn.dataset.yt;
+    const iframe = document.createElement("iframe");
+    // nocookie + autoplay: o play ja foi pedido pelo usuario no clique da capa
+    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+    iframe.title = "Video de apresentacao do Missao 2030";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    btn.replaceWith(iframe);
+  }, { once: true });
+});
