@@ -541,4 +541,6 @@ img { max-width: 100%; }
 .yt-facade:hover .yt-play,
 .yt-facade:focus-visible .yt-play { transform: translate(-50%, -50%) scale(1.09); background: #fff; }
 .yt-facade:focus-visible { outline: 2px solid var(--m30-gold); outline-offset: 3px; }
-.video-frame iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+/* height:auto e obrigatorio: o YT.Player cria o iframe com atributo
+   height="360", que deixa a altura definida e anula o aspect-ratio. */
+.video-frame iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }

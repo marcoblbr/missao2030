@@ -197,15 +197,52 @@ document.querySelectorAll("video").forEach((v) => {
 });
 
 // ---------- capa do YouTube: so carrega o player depois do clique ----------
+// Sobre qualidade: o YouTube DESCONTINUOU o controle de qualidade inicial de um
+// embed. O antigo parametro `vq=hd720` e ignorado, e `setPlaybackQuality()` hoje
+// e apenas uma SUGESTAO: quem decide e o algoritmo de bitrate adaptativo, com
+// base na banda de quem assiste e no tamanho do player. Sugerimos 720p ao abrir
+// e reforcamos se o player cair para 240p/360p, mas nao ha como garantir.
+let apiYT = null;
+function carregarApiYT() {
+  if (apiYT) return apiYT;
+  apiYT = new Promise((ok) => {
+    if (window.YT && window.YT.Player) return ok();
+    window.onYouTubeIframeAPIReady = ok;
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+  });
+  return apiYT;
+}
+
 document.querySelectorAll(".yt-facade").forEach((btn) => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", async () => {
     const id = btn.dataset.yt;
-    const iframe = document.createElement("iframe");
-    // nocookie + autoplay: o play ja foi pedido pelo usuario no clique da capa
-    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
-    iframe.title = "Video de apresentacao do Missao 2030";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.allowFullscreen = true;
-    btn.replaceWith(iframe);
+    const alvo = document.createElement("div");
+    btn.replaceWith(alvo);
+    await carregarApiYT();
+
+    let reforcos = 0;
+    new YT.Player(alvo, {
+      videoId: id,
+      host: "https://www.youtube-nocookie.com",
+      // autoplay: o play ja foi pedido pelo usuario no clique da capa
+      playerVars: { autoplay: 1, rel: 0, modestbranding: 1, playsinline: 1 },
+      events: {
+        onReady: (ev) => {
+          ev.target.setPlaybackQuality("hd720");
+          ev.target.playVideo();
+        },
+        onPlaybackQualityChange: (ev) => {
+          // so reforca se caiu para as faixas ruins, e no maximo 2 vezes:
+          // insistir alem disso brigaria com o algoritmo em conexao lenta
+          // e causaria travadas piores do que a resolucao baixa.
+          if (reforcos < 2 && (ev.data === "small" || ev.data === "medium")) {
+            reforcos++;
+            ev.target.setPlaybackQuality("hd720");
+          }
+        }
+      }
+    });
   }, { once: true });
 });
