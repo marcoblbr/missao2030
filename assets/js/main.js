@@ -122,36 +122,6 @@ document.addEventListener("click", (ev) => {
 document.getElementById("me-prev")?.addEventListener("click", () => abrirEncontro(atual - 1));
 document.getElementById("me-next")?.addEventListener("click", () => abrirEncontro(atual + 1));
 
-// ---------- contador regressivo (aula de abertura 26/08/2026, 19h de Brasilia) ----------
-(function countdown() {
-  // Data fixa com o fuso escrito na string (-03:00). Sem isso o alvo seria
-  // montado no fuso de quem acessa, e quem estivesse fora do Brasil veria
-  // uma contagem deslocada.
-  const alvo = new Date("2026-08-26T19:00:00-03:00");
-
-  const el = {
-    d: document.getElementById("cd-d"),
-    h: document.getElementById("cd-h"),
-    m: document.getElementById("cd-m"),
-    s: document.getElementById("cd-s")
-  };
-  if (!el.d) return;
-
-  function tick() {
-    let diff = Math.max(0, alvo.getTime() - Date.now()) / 1000;
-    const d = Math.floor(diff / 86400); diff -= d * 86400;
-    const h = Math.floor(diff / 3600);  diff -= h * 3600;
-    const m = Math.floor(diff / 60);
-    const s = Math.floor(diff - m * 60);
-    el.d.textContent = String(d);
-    el.h.textContent = String(h).padStart(2, "0");
-    el.m.textContent = String(m).padStart(2, "0");
-    el.s.textContent = String(s).padStart(2, "0");
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
-
 // ---------- reveal on scroll ----------
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((en) => {
